@@ -1,0 +1,24 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        @RenderSection("Meta", required:false)
+        <title>Razor Performance in Nancy :(</title>
+        
+        @RenderSection("Header", required:false)
+    </head>
+    <body>
+        
+        @Html.Partial("_Testimonials", Model)      
+        @Html.Partial("_Trips", Model)
+        @Html.Partial("_Widget3", Model)
+        @Html.Partial("_Widget4", Model)
+
+        <br/><br/><br/>
+
+        @RenderBody()
+        
+        @RenderSection("Footer", required:false)
+    </body>
+</html>

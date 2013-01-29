@@ -1,0 +1,15 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="left">
+    @Html.Partial("_SubWidget1", Model)
+    @Html.Partial("_SubWidget2", Model)
+    @Html.Partial("_SubWidget3", Model)
+</div>
+
+<div class="right">
+    @RenderBody()
+</div>

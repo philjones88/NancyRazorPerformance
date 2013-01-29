@@ -1,0 +1,9 @@
+﻿@using System
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+<div>Widget 1 here
+    <br/>
+    Yesterday is: @DateTime.Now.AddDays(-1)<br/>
+    Today is: @DateTime.Now.Date<br/>
+    Tomorrow is: @DateTime.Now.Date.AddDays(1)
+</div>

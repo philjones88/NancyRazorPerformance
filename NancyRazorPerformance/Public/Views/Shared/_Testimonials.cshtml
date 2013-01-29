@@ -1,0 +1,18 @@
+﻿@using System.Collections.Generic
+@using NancyRazorPerformance
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+              
+@{
+    var testimonials = (List<Testimonial>) Model.Testimonials;
+}
+
+<div>
+    Testimonials (@testimonials.Count)
+
+    @foreach (var testimonial in testimonials)
+    {
+        <p>From @testimonial.Name on @testimonial.At</p>
+        
+        <p>@Html.Raw(testimonial.Content)</p>
+    }
+</div>
